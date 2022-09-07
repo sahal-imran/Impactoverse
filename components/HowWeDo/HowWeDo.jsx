@@ -2,33 +2,26 @@ import React from "react";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 
-// {Importing Images  => For how we do?}
-import Initiatives from "../../public/images/Initiatives.svg";
-import Marketplace from "../../public/images/Marketplace.svg";
-import Collaborations from "../../public/images/Collaborations.svg";
-import Community from "../../public/images /Community.svg";
-import Reporting from "../../public/images/Reporting.svg";
-
 const HowWeDo = () => {
   const Card_Content = [
     {
-      img: Initiatives,
+      img: "/images/Initiatives.svg",
       title: "Vetted Initiatives",
     },
     {
-      img: Marketplace,
+      img: "/images/Marketplace.svg",
       title: "NFT Marketplace",
     },
     {
-      img: Collaborations,
+      img: "/images/Collaborations.svg",
       title: "Collaborations",
     },
     {
-      img: Community,
+      img: "/images /Community.svg",
       title: "Community Building",
     },
     {
-      img: Reporting,
+      img: "/images/Reporting.svg",
       title: "Reporting",
     },
   ];
