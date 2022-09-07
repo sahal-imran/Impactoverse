@@ -118,7 +118,7 @@ function Navbar() {
                     mr: 4,
                   }}
                 >
-                  New to NFT's?
+                  {`New to NFT's?`}
                 </Button>
               </ScrollLink>
               <ScrollLink
@@ -304,7 +304,7 @@ function Navbar() {
                   mt: 3,
                 }}
               >
-                New to NFT's?
+                {`New to NFT's?`}
                 <CallMadeIcon sx={{ color: "#FB8501" }} />
               </AnchorLink>
             </Link>
