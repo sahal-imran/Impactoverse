@@ -8,11 +8,11 @@ const WhatWeDo = () => {
     <Box
       sx={{
         width: "100%",
-        height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        py: 8,
       }}
     >
       {/* Header Text */}
@@ -43,13 +43,13 @@ const WhatWeDo = () => {
           sx={{
             textTransform: "capitalize",
             fontFamily: "Lato",
-            fontSize: { md: "24px", xs: "16px" },
-            lineHeight: { md: "32px", xs: "24px" },
+            fontSize: { md: "18px", xs: "18px" },
+            lineHeight: { md: "24px", xs: "24px" },
             fontWeight: 500,
             fontStyle: "normal",
             color: "black",
             textAlign: "center",
-            maxWidth: "800px",
+            maxWidth: "60%",
             mt: 2,
           }}
         >
@@ -57,27 +57,34 @@ const WhatWeDo = () => {
           and 3 for measurable results.
         </Typography>
       </Box>
-
       {/* Cards */}
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           alignItems: "center",
-          flexDirection: "column",
-          boxShadow: " 8px 8px 13px 0px rgba(0,0,0,0.2)",
-          borderRadius: "8px",
+          flexDirection: { xs: " column", md: "row" },
+          width: "80%",
+          mt: 8,
         }}
       >
-        {/* Upper Part */}
+        {/* Card 1 */}
         <Box
           sx={{
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "center",
             alignItems: "center",
-            flex: 0.5,
+            flexDirection: "column",
+            borderRadius: "8PX",
+            boxShadow: " 8px 8px 13px 0px rgba(0,0,0,0.2)",
+            maxWidth: { xs: "350px", md: "500px" },
+            pt: 3,
+            transition: "all 0.3s ease",
+            mx: { xs: 0, md: 4 },
+            mb: { xs: 5, md: 0 },
           }}
         >
+          {/* Card Upper Part */}
           <Box
             sx={{
               display: "flex",
@@ -108,8 +115,8 @@ const WhatWeDo = () => {
               sx={{
                 textTransform: "capitalize",
                 fontFamily: "Lato",
-                fontSize: { md: "24px", xs: "16px" },
-                lineHeight: { md: "32px", xs: "24px" },
+                fontSize: { md: "24px", xs: "24px" },
+                lineHeight: { md: "32px", xs: "32px" },
                 fontWeight: 700,
                 fontStyle: "normal",
                 color: "black",
@@ -120,33 +127,124 @@ const WhatWeDo = () => {
             >
               Engagement for Results
             </Typography>
+
+            {/* Card Lower Part */}
+            <Box
+              sx={{
+                backgroundColor: "#FB8501",
+                borderRadius: "0px 0px 6px 6px",
+                mt: 2,
+                px: 3,
+                py: 2,
+              }}
+            >
+              <Typography
+                sx={{
+                  textTransform: "capitalize",
+                  fontFamily: "Lato",
+                  fontSize: { md: "18px", xs: "18px" },
+                  lineHeight: { md: "24px", xs: "24px" },
+                  fontWeight: 500,
+                  fontStyle: "normal",
+                  color: "white",
+                  textAlign: "center",
+                  maxWidth: "800px",
+                }}
+              >
+                Brands and creators drive business outcomes via collabs with
+                vetted orgs. NPOs and impact causes scale impact.
+              </Typography>
+            </Box>
           </Box>
         </Box>
-
-        {/* Bottom Part */}
+        {/* Card 2 */}
         <Box
           sx={{
-            backgroundColor: "#FB8501",
-            p: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            borderRadius: "8PX",
+            boxShadow: " 8px 8px 13px 0px rgba(0,0,0,0.2)",
+            maxWidth: { xs: "350px", md: "500px" },
+            pt: 3,
+            transition: "all 0.3s ease",
+            mx: { xs: 0, md: 4 },
+            mb: { xs: 5, md: 0 },
           }}
         >
-          <Typography
+          {/* Card Upper Part */}
+          <Box
             sx={{
-              textTransform: "capitalize",
-              fontFamily: "Lato",
-              fontSize: { md: "20px", xs: "16px" },
-              lineHeight: { md: "28px", xs: "24px" },
-              fontWeight: 500,
-              fontStyle: "normal",
-              color: "white",
-              textAlign: "center",
-              maxWidth: "800px",
-              mt: 2,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
             }}
           >
-            Brands and creators drive business outcomes via collabs with vetted
-            orgs. NPOs and impact causes scale impact.
-          </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100px",
+                height: "100px",
+                position: "relative",
+                transition: "all  0.3s ease",
+              }}
+            >
+              <Image
+                src={"/assets/pictures/Trust.svg"}
+                layout="fill"
+                objectFit="contain"
+                priority
+              />
+            </Box>
+            <Typography
+              sx={{
+                textTransform: "capitalize",
+                fontFamily: "Lato",
+                fontSize: { md: "24px", xs: "24px" },
+                lineHeight: { md: "32px", xs: "32px" },
+                fontWeight: 700,
+                fontStyle: "normal",
+                color: "black",
+                textAlign: "center",
+                maxWidth: "800px",
+                mt: 2,
+              }}
+            >
+              {`Trust & Transparency`}
+            </Typography>
+
+            {/* Card Lower Part */}
+            <Box
+              sx={{
+                backgroundColor: "#FB8501",
+                borderRadius: "0px 0px 6px 6px",
+                mt: 2,
+                px: 3,
+                py: 2,
+              }}
+            >
+              <Typography
+                sx={{
+                  textTransform: "capitalize",
+                  fontFamily: "Lato",
+                  fontSize: { md: "18px", xs: "18px" },
+                  lineHeight: { md: "24px", xs: "24px" },
+                  fontWeight: 500,
+                  fontStyle: "normal",
+                  color: "white",
+                  textAlign: "center",
+                  maxWidth: "800px",
+                }}
+              >
+                We do the due diligence for you-vetting impact campaigns and
+                ensuring transparency with reporting of impact outcomes.
+              </Typography>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Box>
