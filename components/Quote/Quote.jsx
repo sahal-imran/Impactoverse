@@ -47,8 +47,8 @@ const Quote = () => {
           transition: "all 0.23 ease",
         }}
       >
-        "87 percent of consumers say they would purchase a product from a
-        company that 'stood up or advocated for' an issue they care about."
+        {`"87 percent of consumers say they would purchase a product from a
+        company that 'stood up or advocated for' an issue they care about."`}
         <Box
           span
           sx={{
