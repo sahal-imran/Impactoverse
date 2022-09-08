@@ -297,7 +297,7 @@ const Footer = () => {
                   Explore
                 </Typography>
                 {Footer_Right.map((content, index) => (
-                  <Link href={`${content.path}`}>
+                  <Link href={`${content.path}`} key={index}>
                     <Typography
                       sx={{
                         textTransform: "capitalize",
