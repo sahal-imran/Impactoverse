@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@mui/system";
 import { Typography, Button } from "@mui/material";
+import { Container } from "@mui/system";
 import Image from "next/image";
 
 const Purpose = () => {
@@ -41,167 +42,176 @@ const Purpose = () => {
         px: { xs: 1.5, md: 4 },
       }}
     >
-      {/* => Header */}
-      <Typography
+      <Container
         sx={{
-          textTransform: "capitalize",
-          fontFamily: "Lato",
-          fontSize: { md: "56px", xs: "40px" },
-          lineHeight: { md: "70px", xs: "48px" },
-          fontWeight: 600,
-          fontStyle: "normal",
-          color: "#09248a",
-          textAlign: "center",
-        }}
-      >
-        What is impactoverse for?
-      </Typography>
-
-      {/* => Cards Container */}
-      <Box
-        sx={{
+          maxWidth: "lg",
           display: "flex",
+          alignItems: "center",
           justifyContent: "center",
-          alignItems: "flex-start",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          width: "80%",
-          height: "100%",
-          mt: { xs: 4, md: 8 },
-          transition: "all 0.3s ease",
+          flexDirection: "column",
         }}
       >
-        {/* => Rendering all the cards */}
-        {Card_Content.map((content, index) => (
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexDirection: "column",
-              width: { xs: "230px", md: "320px" },
-              transition: "all 0.3s ease",
-              height: { xs: "350px", md: "320px" },
-              border: "2px solid #00000012",
-              borderRadius: "8px",
-              backgroundColor: "#f3f3f366",
-              mx: 2,
-              my: 2,
-              px: 2,
-              py: 2,
-            }}
-            key={index}
-          >
-            {/* => Card Top */}
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-                flex: 0.4,
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "70px",
-                  height: "70px",
-                  position: "relative",
-                  transition: "all  0.3s ease",
-                }}
-              >
-                <Image
-                  src={`${content.img}`}
-                  layout="fill"
-                  objectFit="contain"
-                  priority
-                />
-              </Box>
-              <Typography
-                sx={{
-                  textTransform: "capitalize",
-                  fontFamily: "Lato",
-                  fontSize: { md: "26px", xs: "22px" },
-                  lineHeight: { md: "32px", xs: "28px" },
-                  fontWeight: 600,
-                  fontStyle: "normal",
-                  color: "black",
-                  textAlign: "center",
-                  mt: 3,
-                }}
-              >
-                {content.title}
-              </Typography>
-            </Box>
+        {/* => Header */}
+        <Typography
+          sx={{
+            textTransform: "capitalize",
+            fontFamily: "Lato",
+            fontSize: { md: "56px", xs: "40px" },
+            lineHeight: { md: "70px", xs: "48px" },
+            fontWeight: 600,
+            fontStyle: "normal",
+            color: "#09248a",
+            textAlign: "center",
+          }}
+        >
+          What is impactoverse for?
+        </Typography>
 
-            {/* => Card Bottom */}
+        {/* => Cards Container */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            height: "100%",
+            mt: { xs: 4, md: 8 },
+            transition: "all 0.3s ease",
+          }}
+        >
+          {/* => Rendering all the cards */}
+          {Card_Content.map((content, index) => (
             <Box
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
                 flexDirection: "column",
-                flex: 0.6,
+                width: { xs: "230px", md: "320px" },
+                transition: "all 0.3s ease",
+                height: { xs: "350px", md: "320px" },
+                border: "2px solid #00000012",
+                borderRadius: "8px",
+                backgroundColor: "#f3f3f366",
+                mx: 2,
+                my: 2,
+                px: 2,
+                py: 2,
               }}
+              key={index}
             >
-              <Typography
+              {/* => Card Top */}
+              <Box
                 sx={{
-                  textTransform: "capitalize",
-                  fontFamily: "Lato",
-                  fontSize: { md: "18px", xs: "18px" },
-                  lineHeight: { md: "24px", xs: "24px" },
-                  fontWeight: 500,
-                  fontStyle: "normal",
-                  color: "black",
-                  textAlign: "center",
-                  my: 2,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  flex: 0.4,
                 }}
               >
-                {content.description}
-              </Typography>
-              <Button
-                variant="contained"
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "70px",
+                    height: "70px",
+                    position: "relative",
+                    transition: "all  0.3s ease",
+                  }}
+                >
+                  <Image
+                    src={`${content.img}`}
+                    layout="fill"
+                    objectFit="contain"
+                    priority
+                  />
+                </Box>
+                <Typography
+                  sx={{
+                    textTransform: "capitalize",
+                    fontFamily: "Lato",
+                    fontSize: { md: "26px", xs: "22px" },
+                    lineHeight: { md: "32px", xs: "28px" },
+                    fontWeight: 600,
+                    fontStyle: "normal",
+                    color: "black",
+                    textAlign: "center",
+                    mt: 3,
+                  }}
+                >
+                  {content.title}
+                </Typography>
+              </Box>
+
+              {/* => Card Bottom */}
+              <Box
                 sx={{
-                  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                  backgroundColor: "#FB8501",
-                  px: 2.5,
-                  py: 1,
-                  fontWeight: 500,
-                  whiteSpace: "nowrap",
-                  borderRadius: "8px",
-                  "&:hover": {
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  flex: 0.6,
+                }}
+              >
+                <Typography
+                  sx={{
+                    textTransform: "capitalize",
+                    fontFamily: "Lato",
+                    fontSize: { md: "18px", xs: "18px" },
+                    lineHeight: { md: "24px", xs: "24px" },
+                    fontWeight: 500,
+                    fontStyle: "normal",
+                    color: "black",
+                    textAlign: "center",
+                    my: 2,
+                  }}
+                >
+                  {content.description}
+                </Typography>
+                <Button
+                  variant="contained"
+                  sx={{
+                    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                     backgroundColor: "#FB8501",
-                  },
-                }}
-              >
-                Learn More
-              </Button>
+                    px: 2.5,
+                    py: 1,
+                    fontWeight: 500,
+                    whiteSpace: "nowrap",
+                    borderRadius: "8px",
+                    "&:hover": {
+                      backgroundColor: "#FB8501",
+                    },
+                  }}
+                >
+                  Learn More
+                </Button>
+              </Box>
             </Box>
-          </Box>
-        ))}
-      </Box>
-      <Button
-        variant="contained"
-        sx={{
-          boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-          backgroundColor: "#FB8501",
-          px: 4,
-          py: 1,
-          mt: 6,
-          fontSize: "20px",
-          fontWeight: 500,
-          whiteSpace: "nowrap",
-          borderRadius: "8px",
-          "&:hover": {
+          ))}
+        </Box>
+        <Button
+          variant="contained"
+          sx={{
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
             backgroundColor: "#FB8501",
-          },
-        }}
-      >
-        SIGN UP
-      </Button>
+            px: 4,
+            py: 1,
+            mt: 6,
+            fontSize: "20px",
+            fontWeight: 500,
+            whiteSpace: "nowrap",
+            borderRadius: "8px",
+            "&:hover": {
+              backgroundColor: "#FB8501",
+            },
+          }}
+        >
+          SIGN UP
+        </Button>
+      </Container>
     </Box>
   );
 };

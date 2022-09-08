@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/system";
 import { Typography, Button } from "@mui/material";
 import Image from "next/image";
+import { Container } from "@mui/system";
 
 const Partners = () => {
   //  => Partners Content
@@ -50,41 +51,49 @@ const Partners = () => {
       >
         Our Partners
       </Typography>
-
-      {/* => Partners */}
-      <Box
+      <Container
         sx={{
+          maxWidth: "lg",
           display: "flex",
+          alignItems: "center",
           justifyContent: "center",
-          alignItems: "flex-start",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          width: "80%",
-          height: "100%",
-          mt: { xs: 4, md: 8 },
-          transition: "all 0.3s ease",
+          flexDirection: "column",
         }}
       >
-        {/* => Showing Partners */}
-        {Partners_Content.map((content, index) => (
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100px",
-              height: "100px",
-              position: "relative",
-              transition: "all  0.3s ease",
-              my: { xs: 1.5, md: 2 },
-              mx: { xs: 3, md: 4 },
-            }}
-            key={index}
-          >
-            <Image src={`${content.img}`} layout="fill" objectFit="contain" />
-          </Box>
-        ))}
-      </Box>
+        {/* => Partners */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            height: "100%",
+            mt: { xs: 4, md: 8 },
+            transition: "all 0.3s ease",
+          }}
+        >
+          {/* => Showing Partners */}
+          {Partners_Content.map((content, index) => (
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100px",
+                height: "100px",
+                position: "relative",
+                transition: "all  0.3s ease",
+                my: { xs: 1.5, md: 2 },
+                mx: { xs: 3, md: 4 },
+              }}
+              key={index}
+            >
+              <Image src={`${content.img}`} layout="fill" objectFit="contain" />
+            </Box>
+          ))}
+        </Box>
+      </Container>
     </Box>
   );
 };

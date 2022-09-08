@@ -5,8 +5,10 @@ import Quote from '../components/Quote/Quote'
 import HowWeDo from "../components/HowWeDo/HowWeDo";
 import Purpose from '../components/Purpose/Purpose';
 import Counter from '../components/Counter/Counter';
+import Showcase from "../components/Showcase/Showcase";
 import Partners from '../components/Partners/Partners';
 import Footer from "../components/Footer/Footer";
+
 
 function index() {
   return (
@@ -18,6 +20,7 @@ function index() {
       <HowWeDo />
       <Purpose />
       <Counter />
+      {/* <Showcase /> */}
       <Partners />
       <Footer />
     </>
