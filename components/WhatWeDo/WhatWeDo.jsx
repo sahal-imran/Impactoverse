@@ -13,6 +13,7 @@ const WhatWeDo = () => {
         alignItems: "center",
         flexDirection: "column",
         py: 8,
+        px: { xs: 1.5, md: 4 },
       }}
     >
       {/* Header Text */}
@@ -49,7 +50,7 @@ const WhatWeDo = () => {
             fontStyle: "normal",
             color: "black",
             textAlign: "center",
-            maxWidth: "60%",
+            maxWidth: { xs: "80%", md: "60%" },
             mt: 2,
           }}
         >
