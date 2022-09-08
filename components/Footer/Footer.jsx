@@ -336,7 +336,7 @@ const Footer = () => {
                 }}
               >
                 {Social_Icons.map((icon, index) => (
-                  <AnchorLink href={`${icon.link}`}>
+                  <AnchorLink href={`${icon.link}`} key={index}>
                     <Box
                       sx={{
                         display: "flex",
