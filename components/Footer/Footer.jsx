@@ -257,6 +257,7 @@ const Footer = () => {
                           mb: 2,
                           maxWidth: { xs: "200px", md: "200px" },
                         }}
+                        key={index}
                       >
                         {content.detail}
                       </Typography>
