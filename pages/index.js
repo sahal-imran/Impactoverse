@@ -20,7 +20,7 @@ function index() {
       <HowWeDo />
       <Purpose />
       <Counter />
-      {/* <Showcase /> */}
+      <Showcase />
       <Partners />
       <Footer />
     </>
