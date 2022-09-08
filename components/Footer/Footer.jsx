@@ -238,7 +238,7 @@ const Footer = () => {
                   }}
                 >
                   {Explore_Content.map((content, index) => (
-                    <Link href={`${content.path}`}>
+                    <Link href={`${content.path}`} key={index}>
                       <Typography
                         sx={{
                           textTransform: "capitalize",
@@ -257,7 +257,6 @@ const Footer = () => {
                           mb: 2,
                           maxWidth: { xs: "200px", md: "200px" },
                         }}
-                        key={index}
                       >
                         {content.detail}
                       </Typography>
