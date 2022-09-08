@@ -349,7 +349,6 @@ const Footer = () => {
                         my: 2,
                         mx: 1,
                       }}
-                      key={index}
                     >
                       <Image
                         src={`${icon.img}`}
